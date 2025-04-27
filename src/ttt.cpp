@@ -28,16 +28,20 @@ void displayBoard(const char board[3][3])
                 std::cout<<board[i][x];
             }
         }
-            
-        std::cout<<"\n"<<"__________";
-        std::cout<<std::endl;
+        if(i < 2)
+        {
+            std::cout<<"\n"<<"----------";
+            std::cout<<std::endl;
+        }
+        else std::cout<<std::endl;
     }
 }
 
 // Function to make a move
 bool makeMove(char board[3][3], int row, int col, char player)
 {
-
+    board[row][col] = player;
+    return 1;
 }
 
 // Function to check for a winner
