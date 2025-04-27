@@ -1,0 +1,13 @@
+# Ignore compiled files
+*.o
+*.out
+*.exe
+
+# Ignore backup files
+*~
+
+# Ignore OS files
+.DS_Store
+
+# Ignore build folder (if you ever use one)
+build/
