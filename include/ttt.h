@@ -17,4 +17,5 @@ char checkWinner(const char board[3][3]);
 // Function to check if the board is full (draw)
 bool isBoardFull(const char board[3][3]);
 
+bool isSpotTaken(const char board[3][3], int row, int col);
 #endif // TIC_TAC_TOE_H

@@ -55,3 +55,8 @@ bool isBoardFull(const char board[3][3])
 {
 
 }
+bool isSpotTaken(const char board[3][3], int row, int col)
+{
+    if(board[row][col] == 'O' || board[row][col] == 'X') return 1;
+    else return 0;
+}
