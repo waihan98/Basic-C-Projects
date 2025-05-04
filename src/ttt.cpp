@@ -47,13 +47,22 @@ bool makeMove(char board[3][3], int row, int col, char player)
 // Function to check for a winner
 char checkWinner(const char board[3][3])
 {
-
+    
 }
 
 // Function to check if the board is full (draw)
 bool isBoardFull(const char board[3][3])
 {
-
+    int count = 0;
+    for(int i =0; i < 3; i ++)
+    {
+        for(int x = 0; x <3; x++)
+        {
+            if(board[i][x] == 'X' || board[i][x] == 'O') count++;
+        }
+    }
+    if(count == 9) return 1;
+    else return 0;
 }
 bool isSpotTaken(const char board[3][3], int row, int col)
 {

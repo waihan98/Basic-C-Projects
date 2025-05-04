@@ -54,7 +54,11 @@ int main(void)
                 turn ^= 1;
             }
         }
-        isBoardFull(tttBoard);
+        if(isBoardFull(tttBoard))
+        {
+            std::cout<<"Board is full, No one Wins :("<<std::endl;
+
+        }
     }
     
     return 0;
