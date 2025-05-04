@@ -5,6 +5,7 @@ char playerx = 'X';
 char playero = 'O';
 int turn = 0;
 char decision = 0;
+bool win = 0;
 
 int main(void)
 {
@@ -54,11 +55,17 @@ int main(void)
                 turn ^= 1;
             }
         }
-        if(isBoardFull(tttBoard))
+        if(checkWinner(tttBoard) == 'X') 
         {
-            std::cout<<"Board is full, No one Wins :("<<std::endl;
-
+            std::cout<<"X Wins!"<<std::endl;
+            break;
         }
+        if(checkWinner(tttBoard) == 'O')
+        {
+            std::cout<<"O Wins!"<<std::endl;
+            break;
+        } 
+        if(isBoardFull(tttBoard))std::cout<<"Board is full, No one Wins :("<<std::endl;
     }
     
     return 0;
